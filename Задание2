@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+setlocale(LC_ALL, "rus");
+int a,b,s;
+cout << "Введите сторону прямоугольника" << endl;
+cin >> a;
+cout << "Введите другую сторону прямоугольника" << endl;
+cin >> b;
+if (a > 0 && b > 0) {
+s = a * b;
+}
+else {
+cout << "Введены неправильно значения, введите занова" << endl;
+main();
+}
+cout << s;
+}

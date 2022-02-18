@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL,"rus");
+	double x, l;
+	l = 2.54;
+	cout << "Введите число в см" << endl;
+	cin >> x;
+	if (x >= 0) {
+		x = x / l;
+	}
+	else {
+		cout << "Число введенно не правильно" << endl;
+		main();
+	}
+	cout <<"Перевод числа из см в дюймы= " <<x;
+}

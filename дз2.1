@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int Number;
+    cout<<"Enter your number: ";
+    cin>>Number;
+    cout<<"\n";
+    cout<<"Inverted "<<Number<<" is "; 
+    for (int i=0; Number>0; Number/=10)
+    {
+        i=Number%10;
+        cout<<i;
+    }
+    cout<<"\n"<<endl;
+    return 0;
+}

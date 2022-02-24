@@ -1,0 +1,12 @@
+#include <stdio.h>
+ 
+int main(){
+  int x;
+  char str[1024];
+  while(1){
+    if( fgets(str, 1023, stdin) == NULL)break; //EOF / error
+    if(str[0]=='\n')break; //пустая строка
+    if(sscanf(str,"%i",&x)<=0)break; //неправильная строка
+    printf("%i; next line=>", x);
+  }
+}

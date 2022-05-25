@@ -22,11 +22,15 @@ int main()
         cout<<word<<c;
         words[word]++;
     }
-    cout << "\n\nСлово\tКоличество повторений\n";
+    ofstream fout("file.txt");
+    fout << "\n\nСлово\tКоличество повторений\n";
+    fout.close();
     map<string, int>::iterator it;
     for (it = words.begin(); it != words.end(); it++)
     {
-        cout << it->first << "\t\t" << it->second << endl;
+        ofstream fout("file.txt");
+        fout << it->first << "\t\t" << it->second << endl;
+        fout.close();
     }
     system("pause");
     return 0;
